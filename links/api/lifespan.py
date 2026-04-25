@@ -2,7 +2,7 @@ from fastapi import FastAPI
 
 from contextlib import asynccontextmanager
 
-from project.db.lifespan import on_startup, on_shutdown
+from links.db.lifespan import on_startup, on_shutdown
 
 
 @asynccontextmanager

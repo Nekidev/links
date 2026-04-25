@@ -10,11 +10,11 @@ DEBUG = os.getenv("DEBUG", "False").lower() in ("true", "1", "t")
 
 
 DATABASE = {
-    "connections": {"default": os.getenv("DATABASE_URL", "sqlite://db.sqlite3")},
+    "connections": {"default": os.getenv("LINKS_DATABASE_URL", "sqlite://db.sqlite3")},
     "apps": {
         "models": {
             "models": [
-                "project.db.models.example",
+                "links.db.models.links",
                 "aerich.models",  # Keep this one for migrations.
             ],
             "default_connection": "default",
@@ -23,3 +23,9 @@ DATABASE = {
     "use_tz": True,
     "timezone": "UTC",
 }
+
+
+BASE_URL = os.environ["LINKS_BASE_URL"]
+SITE_URL = os.environ["LINKS_SITE_URL"]
+
+REDIS_URL = os.environ["LINKS_REDIS_URL"]

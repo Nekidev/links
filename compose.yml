@@ -1,0 +1,8 @@
+name: links
+
+services:
+    redis:
+        image: redis:8.2.1-alpine
+        ports:
+            - "6379:6379"
+        restart: unless-stopped

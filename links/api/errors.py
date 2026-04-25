@@ -1,6 +1,6 @@
 from fastapi.responses import ORJSONResponse
 
-from project.api.schemas import ErrorSchema
+from links.api.schemas import ErrorSchema
 
 
 class BaseError(Exception):
@@ -53,6 +53,12 @@ class InternalServerError(ErrorInitMixin, BaseError):
     title: str = "Internal Server Error"
     message: str = "An unexpected error occurred on the server."
     status_code: int = 500
+
+
+class TooManyRequestsError(ErrorInitMixin, BaseError):
+    title: str = "Woah! Too Fast."
+    message: str = "Slow down, turbo. Retry this in some seconds."
+    status_code: int = 429
 
 
 class ValidationError(ErrorInitMixin, BaseError):

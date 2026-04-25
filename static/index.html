@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nyeki's Links</title>
+
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1>Nyeki's Links</h1>
+                <p>
+                    A tiny URL shortener, by
+                    <a href="https://nyeki.dev/">Nyeki</a>.
+                </p>
+            </header>
+
+            <form id="form" method="POST">
+                <input
+                    type="url"
+                    name="url"
+                    id="url"
+                    placeholder="https://example.com/"
+                    maxlength="256"
+                />
+                <button type="submit">Shorten URL</button>
+            </form>
+
+            <div id="results"></div>
+        </main>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>

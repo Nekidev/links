@@ -4,14 +4,14 @@ from aerich import Command
 
 from tortoise import Tortoise, connections
 
-from project.lib import settings
+from links.lib import settings
 
 
 async def on_startup():
     """Connects to the database and creates the missing schemas on FastAPI startup."""
 
     async with Command(
-        tortoise_config=settings.DATABASE, app="models", location="project/db/migrations"
+        tortoise_config=settings.DATABASE, app="models", location="links/db/migrations"
     ) as command:
         parent_dir = Path(__file__).parent
 

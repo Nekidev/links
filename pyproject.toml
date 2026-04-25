@@ -1,5 +1,5 @@
 [project]
-name = "project"
+name = "links"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -10,10 +10,11 @@ dependencies = [
     "nanoid>=2.0.0",
     "orjson>=3.11.5",
     "python-dotenv>=1.2.1",
+    "redis>=7.4.0",
     "tortoise-orm[accel,asyncpg]>=0.25.3",
 ]
 
 [tool.aerich]
-tortoise_orm = "project.lib.settings.DATABASE"
-location = "project/db/migrations"
+tortoise_orm = "links.lib.settings.DATABASE"
+location = "links/db/migrations"
 src_folder = "./."
