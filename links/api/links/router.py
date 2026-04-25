@@ -25,4 +25,4 @@ async def redirect(code: Hex):
     if link is None:
         raise NotFoundError("link")
 
-    return RedirectResponse(link.location)
+    return RedirectResponse(link.location, status_code=308)
