@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from fastapi.responses import ORJSONResponse
+from fastapi.responses import ORJSONResponse, RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 
 from links.lib import settings
@@ -20,6 +20,11 @@ app = FastAPI(
     openapi_tags=docs.OPENAPI_TAGS,
     default_response_class=ORJSONResponse,
 )
+
+
+@app.get("/")
+async def index() -> RedirectResponse:
+    return RedirectResponse(settings.SITE_URL)
 
 
 app.include_router(links_router)
