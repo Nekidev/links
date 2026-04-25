@@ -165,18 +165,22 @@ h3 {
 
 @keyframes alert {
     0% {
-        right: -18rem;
+        right: 0rem;
+        opacity: 0;
     }
 
-    10% {
+    5% {
         right: 2rem;
+        opacity: 1;
     }
 
-    90% {
-        right: 2rem;
+    95% {
+        right: 0rem;
+        opacity: 1;
     }
 
     100% {
-        right: -18rem;
+        right: 0rem;
+        opacity: 0;
     }
 }
