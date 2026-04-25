@@ -44,12 +44,20 @@ input {
 
 button {
     border: 1px solid #fff;
-    background-color: #999;
+    background-color: #bbb;
     outline: none;
     width: 100%;
     font-family: monospace;
     padding: 0.5rem;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: #999;
+}
+
+button:active {
+    transform: scale(97.5%);
 }
 
 form {
