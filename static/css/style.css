@@ -84,10 +84,10 @@ button:active {
 
 button:disabled {
     opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .button-primary:disabled:hover {
-    cursor: not-allowed;
     background-color: #bbb;
 }
 
