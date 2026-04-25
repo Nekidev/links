@@ -1,3 +1,11 @@
+let apiHost;
+
+if (window.location.hostname == "localhost" || window.location.hostname == "127.0.0.1") {
+    apiHost = "http://127.0.0.1:8000";
+} else {
+    apiHost = "https://nye.lat";
+}
+
 const form = document.querySelector("#form");
 const input = document.querySelector("#url");
 const results = document.querySelector("#results");
@@ -7,7 +15,7 @@ async function onSubmit(e) {
 
     let long = input.value;
 
-    let response = await fetch("http://localhost:8000/links", {
+    let response = await fetch(`${apiHost}/links`, {
         method: "POST",
         body: JSON.stringify({ location: long }),
         headers: {
