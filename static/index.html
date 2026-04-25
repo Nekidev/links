@@ -25,10 +25,19 @@
                     placeholder="https://example.com/"
                     maxlength="256"
                 />
-                <button type="submit" id="submit">Shorten URL</button>
+                <button type="submit" id="submit" class="button-primary">Shorten URL</button>
             </form>
 
-            <div id="results"></div>
+            <div id="results-container">
+                <h3>My Links</h3>
+                <div id="results-empty">Create a link to show it here.</div>
+                <div id="results"></div>
+                <button id="results-clear" class="button-secondary" disabled>
+                    Clear Links
+                </button>
+            </div>
+
+            <div id="alert" class="hidden"></div>
         </main>
 
         <script src="js/script.js"></script>
