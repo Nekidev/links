@@ -158,8 +158,9 @@ h3 {
     bottom: 4rem;
     animation: 5s ease-in-out 0s alert;
     animation-fill-mode: both;
-    background-color: #222;
-    padding: 1rem;
+    background-color: #eee;
+    color: #111;
+    padding: 1rem 2rem;
 }
 
 @keyframes alert {
