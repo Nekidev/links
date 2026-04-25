@@ -29,7 +29,7 @@ async function onSubmit(e) {
         let data = await response.json();
     
         if (!response.ok) {
-            alert("We couldn't generate your URL!");
+            alert("We couldn't generate your URL! " + data.message);
             return;
         }
     
